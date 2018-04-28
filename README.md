@@ -23,4 +23,5 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Advanced AI (each side should have a varity of differently skilled AI)
 
 # Bugs
-- Moving diagonal is faster than moving orthogional
+- projectiles spawn on top of player now
+- bounce-bolts are sometimes shot with very little velocity

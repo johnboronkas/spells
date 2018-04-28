@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMoverController : MoverController
@@ -16,21 +13,15 @@ public class PlayerMoverController : MoverController
     public override void HandleMovement(int currentSprintSpeed, int currentSpeed)
     {
         float speed = (Input.GetButton(InputManager.Sprint) ? currentSprintSpeed : currentSpeed) * Time.deltaTime;
-        float horizonal = Input.GetAxis(InputManager.Horizontal) * speed;
-        float vertical = Input.GetAxis(InputManager.Vertical) * speed;
-        var inputForce = new Vector2(horizonal, vertical);
-        Rigidbody2D.AddForce(inputForce, ForceMode2D.Force);
-    }
+        float horizonal = Input.GetAxis(InputManager.Horizontal);
+        float vertical = Input.GetAxis(InputManager.Vertical);
 
-    // TODO Move out into the AbilityUserController (ability user should be the one aiming).
-    public override void HandleRotation()
-    {
-        Vector3 playerPosition = Camera.main.WorldToScreenPoint(transform.position);
-        Vector3 mousePosition = Input.mousePosition;
-        mousePosition.x -= playerPosition.x;
-        mousePosition.y -= playerPosition.y;
+        Vector2 inputForce = new Vector2(horizonal, vertical);
+        inputForce.Normalize();
 
-        float angle = (Mathf.Atan2(mousePosition.y, mousePosition.x) * Mathf.Rad2Deg) - 90.0f;
-        transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
+        Rigidbody2D.AddForce(
+            (inputForce * speed),
+            ForceMode2D.Force
+        );
     }
 }

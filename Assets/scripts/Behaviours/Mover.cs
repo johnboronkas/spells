@@ -10,11 +10,6 @@ public class Mover : MonoBehaviour
     public int CurrentSpeed;
     public int CurrentSprintSpeed;
 
-    private void Update()
-    {
-        MoverController.HandleRotation();
-    }
-
     private void FixedUpdate()
     {
         MoverController.HandleMovement(CurrentSprintSpeed, CurrentSpeed);

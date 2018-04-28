@@ -80,14 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\scripts\Abilities\Ability.cs" />
     <Compile Include="Assets\scripts\Behaviours\AbilityUser.cs" />
+    <Compile Include="Assets\scripts\Behaviours\AbilityUserController.cs" />
     <Compile Include="Assets\scripts\Behaviours\Health.cs" />
     <Compile Include="Assets\scripts\Behaviours\Mover.cs" />
     <Compile Include="Assets\scripts\Behaviours\MoverController.cs" />
     <Compile Include="Assets\scripts\Controllers\AIMoverController.cs" />
+    <Compile Include="Assets\scripts\Controllers\PlayerAbilityUserController.cs" />
     <Compile Include="Assets\scripts\Controllers\PlayerMoverController.cs" />
     <Compile Include="Assets\scripts\Util\InputManager.cs" />
-    <Compile Include="Assets\scripts\Controllers\PlayerController.cs" />
     <Compile Include="Assets\scripts\Abilities\BounceBolt.cs" />
     <Compile Include="Assets\scripts\GameLogic\Respawner.cs" />
     <Compile Include="Assets\scripts\Util\Tags.cs" />

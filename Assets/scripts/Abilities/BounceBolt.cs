@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class BounceBolt : MonoBehaviour
+public class BounceBolt : Ability
 {
     public float SpellSpeed;
     public int MaxBounces;
@@ -42,5 +42,12 @@ public class BounceBolt : MonoBehaviour
         {
             // other.gameObject.GetComponent<PlayerController>().AdjustHealth(-Damage);
         }
+    }
+
+    public override void Activate(Transform transform)
+    {
+        var position = transform.position + (ProjectileSpawnDistance * transform.up);
+        var rotation = transform.rotation;
+        Instantiate(this, position, rotation);
     }
 }

@@ -1,10 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class AbilityUser : MonoBehaviour
 {
+    public AbilityUserController AbilityUserController;
 
+    private void Update()
+    {
+        AbilityUserController.HandleRotation();
+        AbilityUserController.HandleAbilities();
+    }
 }
