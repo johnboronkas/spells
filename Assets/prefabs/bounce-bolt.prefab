@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SpellSpeed: 8
   MaxBounces: 2
-  Damage: 20
+  Damage: 5
   ProjectileSpawnDistance: 0.25
 --- !u!212 &212499557022910898
 SpriteRenderer:

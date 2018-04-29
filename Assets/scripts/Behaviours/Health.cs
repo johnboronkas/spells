@@ -1,13 +1,11 @@
 ﻿using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Respawner))]
 public class Health : MonoBehaviour
 {
     public int MaxHealth;
+    public int CurrentHealth;
     public Respawner Respawner;
-
-    private int CurrentHealth;
 
     public void AdjustHealth(int amount)
     {

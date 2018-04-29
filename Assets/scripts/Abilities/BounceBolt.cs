@@ -27,6 +27,13 @@ public class BounceBolt : Ability
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Health health = other.gameObject.GetComponent<Health>();
+        if (health != null)
+        {
+            health.AdjustHealth(-Damage);
+            Destroy(gameObject);
+        }
+
         if (other.gameObject.CompareTag(Tags.Wall))
         {
             if (CurrentBounces < MaxBounces)
@@ -38,10 +45,6 @@ public class BounceBolt : Ability
             {
                 Destroy(gameObject);
             }
-        }
-        //else if (other.gameObject.GetComponents<Health>())
-        {
-            //other.gameObject.GetComponent<PlayerController>().AdjustHealth(-Damage);
         }
     }
 

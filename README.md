@@ -1,8 +1,7 @@
 # spells
 Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
-# TODO (kanban top to bottom)
-- Health (no health regen)
+# TODO (priority order)
 - Basic AI
 - Mana (slow mana regen)
 - Sprinting costs mana
