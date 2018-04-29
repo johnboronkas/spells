@@ -10,7 +10,7 @@ public class AIMoverController : MoverController
         Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public override void HandleMovement(int currentSprintSpeed, int currentSpeed)
+    public override void HandleMovement(Mover mover)
     {
         
     }

@@ -18,12 +18,6 @@
         private set { }
     }
 
-    public static string Sprint
-    {
-        get { return "Sprint"; }
-        private set { }
-    }
-
     public static string Mouse_X
     {
         get { return "Mouse X"; }

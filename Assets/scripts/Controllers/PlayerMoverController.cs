@@ -10,9 +10,9 @@ public class PlayerMoverController : MoverController
         Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    public override void HandleMovement(int currentSprintSpeed, int currentSpeed)
+    public override void HandleMovement(Mover mover)
     {
-        float speed = (Input.GetButton(InputManager.Sprint) ? currentSprintSpeed : currentSpeed) * Time.deltaTime;
+        float speed = mover.CurrentSpeed * Time.deltaTime;
         float horizonal = Input.GetAxis(InputManager.Horizontal);
         float vertical = Input.GetAxis(InputManager.Vertical);
 
