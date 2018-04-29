@@ -1,13 +1,16 @@
 # spells
+
 Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # TODO (priority order)
+
 - Mana (slow mana regen)
 - Sprinting costs mana
 - Display unit name above head
 - Display health bar (public info - red)
 - Display mana bar (public info - blue)
 - Camera Movement / Larger maps (keep camera centered)
+- Camera Zoom controls
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal
@@ -20,7 +23,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
   - Ranks are shown as as a pre-fix to player's nickname (Peons shown with no name, Captains shown as just Captain, all others shown as Officer SomeName)
 - Pits (shoot over, but can't walk over)
 - Shields (move over, but can't shoot over)
-- Capture point and regen/respawn points (associated to nearby capture point)
+- Capture point and regen health, regen mana, better exp gain, more ai troops, respawn points (associated to nearby capture point)
 - Mutliplayer
 - Dynisty Warriors style game play (with kill counter)
 - Show unit count for each side and number of officers, lieutenants, and generals (per side)
