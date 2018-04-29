@@ -39,9 +39,9 @@ public class BounceBolt : Ability
                 Destroy(gameObject);
             }
         }
-        else if (other.gameObject.CompareTag(Tags.Player))
+        //else if (other.gameObject.GetComponents<Health>())
         {
-            // other.gameObject.GetComponent<PlayerController>().AdjustHealth(-Damage);
+            //other.gameObject.GetComponent<PlayerController>().AdjustHealth(-Damage);
         }
     }
 

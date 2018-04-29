@@ -11,7 +11,7 @@ public static class Utils
 
         // assign the reflected velocity back to the rigidbody
         rigidbody2D.velocity = reflectedVelocity;
-        // rotate the object by the same ammount we changed its velocity
+        // rotate the object by the same amount we changed its velocity
         Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         transform.rotation = rotation * transform.rotation;
     }
