@@ -1,11 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using UnityEngine;
 
-namespace Assets.scripts.Controllers
+[RequireComponent(typeof(Rigidbody2D))]
+public class AIMoverController : MoverController
 {
-    class AIMoverController
+    private Rigidbody2D Rigidbody2D;
+
+    private void Start()
     {
+        Rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+
+    public override void HandleMovement(int currentSprintSpeed, int currentSpeed)
+    {
+        
     }
 }
