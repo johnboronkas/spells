@@ -9,7 +9,7 @@ public class AIAbilityUserController : AbilityUserController
         
     }
 
-    public override void HandleAbilities()
+    public override void HandleAbilities(AbilityUser abilityUser)
     {
         
     }

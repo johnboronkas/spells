@@ -27,11 +27,11 @@ public class PlayerAbilityUserController : AbilityUserController
         transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle));
     }
 
-    public override void HandleAbilities()
+    public override void HandleAbilities(AbilityUser abilityUser)
     {
         if (Input.GetButtonDown(InputManager.Ability1))
         {
-            Abilities[0].Activate(gameObject.transform);
+            Abilities[0].Activate(gameObject.transform, abilityUser);
         }
     }
 }

@@ -4,8 +4,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # TODO (priority order)
 
-- Mana (slow mana regen)
-- Sprinting costs mana
 - Display unit name above head
 - Display health bar (public info - red)
 - Display mana bar (public info - blue)

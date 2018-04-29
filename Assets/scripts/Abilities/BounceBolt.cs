@@ -7,6 +7,7 @@ public class BounceBolt : Ability
     public int MaxBounces;
     public int Damage;
     public float ProjectileSpawnDistance;
+    public int EnergyCost;
 
     private Rigidbody2D Rigidbody2D;
     private int CurrentBounces;
@@ -48,10 +49,15 @@ public class BounceBolt : Ability
         }
     }
 
-    public override void Activate(Transform transform)
+    public override void Activate(Transform transform, AbilityUser abilityUser)
     {
-        var position = transform.position + (ProjectileSpawnDistance * transform.up);
-        var rotation = transform.rotation;
-        Instantiate(this, position, rotation);
+        if (abilityUser.CanAffordAbility(EnergyCost))
+        {
+            abilityUser.AdjustEnergy(-EnergyCost);
+
+            var position = transform.position + (ProjectileSpawnDistance * transform.up);
+            var rotation = transform.rotation;
+            Instantiate(this, position, rotation);
+        }
     }
 }

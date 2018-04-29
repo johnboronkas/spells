@@ -104,6 +104,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityUserController: {fileID: 114137482189839752}
+  MaxEnergy: 10
+  CurrentEnergy: 10
+  MaxRechargeRatePerSec: 1
+  CurrentRechargeRatePerSec: 1
 --- !u!114 &114137482189839752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,8 +149,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d3607c7084c5b74c93fbb7fd331096e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 35
-  CurrentHealth: 25
+  MaxHealth: 30
+  CurrentHealth: 20
   Respawner: {fileID: 114813800290025380, guid: e21eddf73fcde0a4fab01cd88bb8db2f,
     type: 2}
 --- !u!114 &114665812230401456

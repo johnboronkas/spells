@@ -2,5 +2,5 @@
 
 public abstract class Ability : MonoBehaviour
 {
-    public abstract void Activate(Transform transform);
+    public abstract void Activate(Transform transform, AbilityUser abilityUser);
 }
