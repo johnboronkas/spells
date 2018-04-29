@@ -99,9 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6be90574e9dc11a4089e9f1566c13a93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellSpeed: 450
+  SpellSpeed: 8
   MaxBounces: 2
   Damage: 20
+  ProjectileSpawnDistance: 0.25
 --- !u!212 &212499557022910898
 SpriteRenderer:
   m_ObjectHideFlags: 1

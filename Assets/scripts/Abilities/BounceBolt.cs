@@ -6,6 +6,7 @@ public class BounceBolt : Ability
     public float SpellSpeed;
     public int MaxBounces;
     public int Damage;
+    public float ProjectileSpawnDistance;
 
     private Rigidbody2D Rigidbody2D;
     private int CurrentBounces;
@@ -15,7 +16,7 @@ public class BounceBolt : Ability
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
 
-        var force = transform.up * SpellSpeed * Time.deltaTime;
+        var force = transform.up * SpellSpeed;
         Rigidbody2D.AddForce(force, ForceMode2D.Impulse);
     }
 
