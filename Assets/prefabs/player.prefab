@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702046471187372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4146551395433844}
@@ -237,6 +237,8 @@ MonoBehaviour:
   CurrentHealth: 20
   Respawner: {fileID: 114813800290025380, guid: e21eddf73fcde0a4fab01cd88bb8db2f,
     type: 2}
+  DependentGameObjects:
+  - {fileID: 1702046471187372}
 --- !u!114 &114533592730599376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,6 +263,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitUIControllerDef: {fileID: 114533592730599376}
   UnitName: Default
+  FloatHeight: 0.3
 --- !u!114 &114665812230401456
 MonoBehaviour:
   m_ObjectHideFlags: 1

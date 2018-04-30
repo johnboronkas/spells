@@ -18,7 +18,7 @@ public class AbilityUser : MonoBehaviour
 
     private IEnumerator RechargeEnergy()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(1.0f);
             AdjustEnergy(CurrentRechargeRatePerSec);

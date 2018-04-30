@@ -4,7 +4,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # TODO (priority order)
 
-- Display unit name above head (see bug)
 - Add markdown files to every directory explaining their use (abilties, behaviours, controller defs, controllers)
 - Display health bar (public info - red)
 - Display mana bar (public info - blue)
@@ -32,4 +31,4 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # Bugs
 
-- Floating text rotates properaly, but doesn't stay above the unit
+- None known

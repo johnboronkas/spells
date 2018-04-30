@@ -5,16 +5,24 @@ public class UnitUI : MonoBehaviour
     public UnitUIController UnitUIControllerDef;
     
     public string UnitName;
+    public float FloatHeight; // 0.3f
+
+    private Transform parent;
+
+    private void Start()
+    {
+        parent = transform.parent;
+        transform.parent = null;
+    }
 
     private void LateUpdate()
     {
-        CenterAboveUnit();
         UnitUIControllerDef.UpdateUnitUI(this);
+        CenterAboveUnit();
     }
 
     private void CenterAboveUnit()
     {
-        // TODO PICKUP FIX
-        transform.rotation = Quaternion.identity;
+        transform.position = parent.position + (Vector3.up * FloatHeight);
     }
 }
