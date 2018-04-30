@@ -4,7 +4,8 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # TODO (priority order)
 
-- Display unit name above head
+- Display unit name above head (see bug)
+- Add markdown files to every directory explaining their use (abilties, behaviours, controller defs, controllers)
 - Display health bar (public info - red)
 - Display mana bar (public info - blue)
 - Camera Movement / Larger maps (keep camera centered)
@@ -30,4 +31,5 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Advanced AI (each side should have a varity of differently skilled AI)
 
 # Bugs
-- None known
+
+- Floating text rotates properaly, but doesn't stay above the unit
