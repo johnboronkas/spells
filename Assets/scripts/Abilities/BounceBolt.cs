@@ -32,20 +32,16 @@ public class BounceBolt : Ability
         if (health != null)
         {
             health.AdjustHealth(-Damage);
-            Destroy(gameObject);
         }
 
-        if (other.gameObject.CompareTag(Tags.Wall))
+        if (CurrentBounces < MaxBounces)
         {
-            if (CurrentBounces < MaxBounces)
-            {
-                Utils.Reflect(Rigidbody2D, transform, oldVelocity, other);
-                CurrentBounces++;
-            }
-            else
-            {
-                Destroy(gameObject);
-            }
+            Utils.Reflect(Rigidbody2D, transform, oldVelocity, other);
+            CurrentBounces++;
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 
