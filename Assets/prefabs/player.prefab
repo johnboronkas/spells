@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 102082611106594090}
   - component: {fileID: 114533592730599376}
   m_Layer: 10
-  m_Name: UnitUI
+  m_Name: UnitNameUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ded089e0199ec469145141e42fdd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitUIControllerDef: {fileID: 114533592730599376}
+  UnitNameUIControllerDef: {fileID: 114533592730599376}
   UnitName: Default
   FloatHeight: 0.3
 --- !u!114 &114665812230401456

@@ -2,7 +2,7 @@
 
 [RequireComponent(typeof(TextMesh))]
 [RequireComponent(typeof(MeshRenderer))]
-public class DefaultUnitUIController : UnitUIController
+public class DefaultUnitNameUIController : UnitNameUIController
 {
     private TextMesh NameTextMesh;
     private MeshRenderer NameMeshRenderer;
@@ -16,8 +16,8 @@ public class DefaultUnitUIController : UnitUIController
         NameMeshRenderer.sortingOrder = 0;
     }
 
-    public override void UpdateUnitUI(UnitUI unitUI)
+    public override void UpdateUnitNameUI(UnitNameUI unitNameUI)
     {
-        NameTextMesh.text = unitUI.UnitName;
+        NameTextMesh.text = unitNameUI.UnitName;
     }
 }

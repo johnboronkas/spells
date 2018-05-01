@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class UnitUI : MonoBehaviour
+public class UnitNameUI : MonoBehaviour
 {
-    public UnitUIController UnitUIControllerDef;
+    public UnitNameUIController UnitNameUIControllerDef;
     
     public string UnitName;
     public float FloatHeight; // 0.3f
@@ -17,7 +17,7 @@ public class UnitUI : MonoBehaviour
 
     private void LateUpdate()
     {
-        UnitUIControllerDef.UpdateUnitUI(this);
+        UnitNameUIControllerDef.UpdateUnitNameUI(this);
         CenterAboveUnit();
     }
 
