@@ -11,6 +11,23 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1493149387057506}
   m_IsPrefabParent: 1
+--- !u!1 &1273393389541756
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4512816080204946}
+  - component: {fileID: 114784859505137926}
+  - component: {fileID: 114756272235721194}
+  m_Layer: 9
+  m_Name: UnitHealthUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1493149387057506
 GameObject:
   m_ObjectHideFlags: 0
@@ -77,8 +94,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4097977957519402}
+  - {fileID: 4512816080204946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4512816080204946
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273393389541756}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4146551395433844}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23119184903414606
 MeshRenderer:
@@ -239,6 +270,7 @@ MonoBehaviour:
     type: 2}
   DependentGameObjects:
   - {fileID: 1702046471187372}
+  - {fileID: 1273393389541756}
 --- !u!114 &114533592730599376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,7 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ded089e0199ec469145141e42fdd45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  UnitNameUIControllerDef: {fileID: 114533592730599376}
+  UnitNameUIController: {fileID: 114533592730599376}
   UnitName: Default
   FloatHeight: 0.3
 --- !u!114 &114665812230401456
@@ -275,6 +307,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27ad9698acbbff54387998eaadce4a43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114756272235721194
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273393389541756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de8a601cfc20e8f49a227d6226044d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114784859505137926
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273393389541756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be6dc728fd32443bc7ffe42e5f52d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitHealthUIController: {fileID: 114756272235721194}
+  FloatHeight: 0.2
 --- !u!212 &212871306741485120
 SpriteRenderer:
   m_ObjectHideFlags: 1

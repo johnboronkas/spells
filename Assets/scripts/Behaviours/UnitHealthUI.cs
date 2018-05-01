@@ -1,11 +1,10 @@
 ﻿using UnityEngine;
 
-public class UnitNameUI : MonoBehaviour
+public class UnitHealthUI : MonoBehaviour
 {
-    public UnitNameUIController UnitNameUIController;
-    
-    public string UnitName;
-    public float FloatHeight; // 0.3f
+    public UnitHealthUIController UnitHealthUIController;
+
+    public float FloatHeight; // 0.2f
 
     private Transform parent;
 
@@ -17,7 +16,7 @@ public class UnitNameUI : MonoBehaviour
 
     private void LateUpdate()
     {
-        UnitNameUIController.UpdateUnitNameUI(this);
+        UnitHealthUIController.UpdateUnitHealthUI(this);
         Utils.CenterAboveUnit(transform, parent, FloatHeight);
     }
 }

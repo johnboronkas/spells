@@ -15,4 +15,9 @@ public static class Utils
         Quaternion rotation = Quaternion.FromToRotation(oldVelocity, reflectedVelocity);
         transform.rotation = rotation * transform.rotation;
     }
+
+    public static void CenterAboveUnit(Transform transform, Transform unit, float floatHeight)
+    {
+        transform.position = unit.position + (Vector3.up * floatHeight);
+    }
 }
