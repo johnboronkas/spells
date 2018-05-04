@@ -8,8 +8,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 # TODO (priority order)
 
-- Display health bar (public info - red)
-  - All done expect for the actual bar display part (Controllers/DefaultUnitHealthUIController is in charge of the rendering)
 - Display mana bar (public info - blue)
 - Camera Movement / Larger maps (keep camera centered)
 - Camera Zoom controls
