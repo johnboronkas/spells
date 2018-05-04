@@ -2,13 +2,15 @@
 
 Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
-# Bugs
+## Bugs
 
 - None known
 
-# TODO (priority order)
+## TODO (priority order)
 
-- Display mana bar (public info - blue)
+- Ability Rate of Fire
+  - Bounce bolt should be about 0.25 / sec
+  - No max rate of fire
 - Camera Movement / Larger maps (keep camera centered)
 - Camera Zoom controls
 - Blocking/reflecting spell
@@ -34,7 +36,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Kills of Officers, Lieutenants, and Generals are announced globaly (both the killer and the killed)
 - AI (each side should have a varity of differently skilled AI)
 
-## TODO Later
+### TODO Later
 
 - Detailed leader board
 - Multiple levels to choose from & level select screen
@@ -44,11 +46,48 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Battle customization screen
 - More classes (ranger, warlock, assassin, barbarian, druid, etc)
 
-# Class Ideas
+## Class Ideas
 
-- Warlocks drain energy but don't regen normally
-  - Upgrade to auto drain from nearby allies that have full energy
+- Mage
+  - Short range Teleport
+  - Fireball (fire once normally as a small projectile, explode on impact or on second button press)
 - Archer arrows pierce 'x' walls and units and do a lot of damage, but are inaccurate over long range
+  - Should shoot about 1 / 0.75 sec
   - Double-shot upgrade (shoot 2 arrows at once (each drifts seperately))
   - Fan-shot upgrade (shoot 3 arrows in a fan pattern, can stack with the double-shot)
+  - Upgrade for more accurate shots
+  - Can place hidden traps that explode when stepped on
+  - Has limited energy that doesn't regenerate
+  - Faster movement speed than mage
+  - Starts with 15 max and current health
+- Warlocks drain energy but don't regen normally
+  - Upgrade to auto drain from nearby allies that have full energy
+  - Confuse (mult. target move speed by -1)
+  - Energy drain
 - Druid plants trees that heal and turrets that auto-attack
+- Barbarian
+  - Loses energy over time
+    - Gain energy by taking or doing damage
+  - Blood Rage
+	- Self-heal costing a lot of energy and tmp move/primary attack speed buff
+  - Cleave
+    - Lowers target's max health and major push-back w/ large move speed debuff for short time (crawling)
+- Assassian
+  - Backstabs for major damage
+  - Poison dart causes tmp health degen and move speed loss
+  - Cloak to go invisible for a short amount of time and increase own move speed
+  - Can place caltrops trap that sets target's movement speed to 0 for a short time 
+
+### Class Upgrades
+
+- Max health
+- minor Health regen
+- Max energy
+- energy regen
+- speed
+- attack speed
+- new abilities to use / ability ranks (upgrades)
+
+## Gameplay Notes
+
+- Forts / sources of regen go by %/sec rather than a hard number

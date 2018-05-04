@@ -11,6 +11,39 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1493149387057506}
   m_IsPrefabParent: 1
+--- !u!1 &1104121746851844
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4722378540506032}
+  - component: {fileID: 212550466712563920}
+  m_Layer: 10
+  m_Name: HealthBarBackground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1261368466657976
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4463418902414496}
+  - component: {fileID: 114784859505137926}
+  - component: {fileID: 114756272235721194}
+  m_Layer: 10
+  m_Name: UnitHealthUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1273393389541756
 GameObject:
   m_ObjectHideFlags: 0
@@ -19,10 +52,10 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4512816080204946}
-  - component: {fileID: 114784859505137926}
-  - component: {fileID: 114756272235721194}
+  - component: {fileID: 114640115175710142}
+  - component: {fileID: 114145547782103684}
   m_Layer: 10
-  m_Name: UnitHealthUI
+  m_Name: UnitEnergyUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +84,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1649806769181846
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4862445592559244}
+  - component: {fileID: 212984808628245200}
+  m_Layer: 10
+  m_Name: HealthBarForeground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1668185080822536
 GameObject:
   m_ObjectHideFlags: 1
@@ -61,7 +110,7 @@ GameObject:
   - component: {fileID: 4247453319302540}
   - component: {fileID: 212852676537687348}
   m_Layer: 10
-  m_Name: HealthBarForeground
+  m_Name: EnergyBarForeground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,7 +145,7 @@ GameObject:
   - component: {fileID: 4615034396137938}
   - component: {fileID: 212084462748068706}
   m_Layer: 10
-  m_Name: HealthBarBackground
+  m_Name: EnergyBarBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +175,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4097977957519402}
+  - {fileID: 4463418902414496}
   - {fileID: 4512816080204946}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -143,20 +193,35 @@ Transform:
   m_Father: {fileID: 4512816080204946}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4463418902414496
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1261368466657976}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4722378540506032}
+  - {fileID: 4862445592559244}
+  m_Father: {fileID: 4146551395433844}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4512816080204946
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1273393389541756}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4615034396137938}
   - {fileID: 4247453319302540}
   m_Father: {fileID: 4146551395433844}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4615034396137938
 Transform:
@@ -170,6 +235,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4512816080204946}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4722378540506032
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104121746851844}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4463418902414496}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4862445592559244
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649806769181846}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4463418902414496}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &23119184903414606
 MeshRenderer:
@@ -281,10 +372,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityUserController: {fileID: 114137482189839752}
-  MaxEnergy: 10
-  CurrentEnergy: 10
-  MaxRechargeRatePerSec: 1
-  CurrentRechargeRatePerSec: 1
+  MaxEnergy: 50
+  CurrentEnergy: 25
+  MaxRechargeRatePerSec: 4
+  CurrentRechargeRatePerSec: 4
 --- !u!114 &114137482189839752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -299,6 +390,17 @@ MonoBehaviour:
   Abilities:
   - {fileID: 114016781270357246, guid: 3a49868b69f37d34fa790fa397a1dc28, type: 2}
   CursorTexture: {fileID: 2800000, guid: 34336d923d7b3bd4fa0db0978a83c67f, type: 3}
+--- !u!114 &114145547782103684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273393389541756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d635bb30550413a43b5fd887a421300e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114228798029138152
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,8 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoverController: {fileID: 114665812230401456}
-  MaxSpeed: 2000
-  CurrentSpeed: 2000
+  Speed: 2000
 --- !u!114 &114402239120299916
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -330,6 +431,7 @@ MonoBehaviour:
     type: 2}
   DependentGameObjects:
   - {fileID: 1702046471187372}
+  - {fileID: 1261368466657976}
   - {fileID: 1273393389541756}
 --- !u!114 &114533592730599376
 MonoBehaviour:
@@ -342,6 +444,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fd1ae3834bc6a4bbeff316017ef881, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114640115175710142
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1273393389541756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee37e5b8d7011e84fb9b6829d8b68b6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UnitEnergyUIController: {fileID: 114145547782103684}
+  FloatHeight: 0.35
+  EnergyBarBackground: {fileID: 4615034396137938}
+  EnergyBarForeground: {fileID: 4247453319302540}
 --- !u!114 &114654760273957370
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -372,7 +489,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273393389541756}
+  m_GameObject: {fileID: 1261368466657976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de8a601cfc20e8f49a227d6226044d4d, type: 3}
@@ -383,7 +500,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1273393389541756}
+  m_GameObject: {fileID: 1261368466657976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62be6dc728fd32443bc7ffe42e5f52d0, type: 3}
@@ -391,14 +508,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitHealthUIController: {fileID: 114756272235721194}
   FloatHeight: 0.4
-  HealthBarBackground: {fileID: 4615034396137938}
-  HealthBarForeground: {fileID: 4247453319302540}
+  HealthBarBackground: {fileID: 4722378540506032}
+  HealthBarForeground: {fileID: 4862445592559244}
 --- !u!212 &212084462748068706
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1777804569410170}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -4267921
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: ca3d2570446e43e458630354772df5fc, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.01, y: 0.01}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+--- !u!212 &212550466712563920
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1104121746851844}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -466,7 +624,7 @@ SpriteRenderer:
   m_SortingLayerID: -4267921
   m_SortingLayer: 4
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 3fb7e04c5f197674cb37686a1d9e5493, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 38ef5bb12700d75459c493bbbf01a2a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -513,6 +671,47 @@ SpriteRenderer:
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.25, y: 0.25}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+--- !u!212 &212984808628245200
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1649806769181846}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -4267921
+  m_SortingLayer: 4
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 3fb7e04c5f197674cb37686a1d9e5493, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.01, y: 0.01}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 
-public class UnitNameUI : MonoBehaviour
+public class UnitEnergyUI : MonoBehaviour
 {
-    public UnitNameUIController UnitNameUIController;
-    
-    public string UnitName;
+    public UnitEnergyUIController UnitEnergyUIController;
+
     public float FloatHeight;
+    public Transform EnergyBarBackground;
+    public Transform EnergyBarForeground;
 
     private Transform parent;
 
@@ -17,7 +18,7 @@ public class UnitNameUI : MonoBehaviour
 
     private void LateUpdate()
     {
-        UnitNameUIController.UpdateUnitNameUI(this);
+        UnitEnergyUIController.UpdateUnitEnergyUI(this);
         Utils.CenterAboveUnit(transform, parent, FloatHeight);
     }
 }

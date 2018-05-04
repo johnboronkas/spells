@@ -103,7 +103,7 @@ MonoBehaviour:
   MaxBounces: 2
   Damage: 5
   ProjectileSpawnDistance: 0.25
-  EnergyCost: 1
+  EnergyCost: 4
 --- !u!212 &212499557022910898
 SpriteRenderer:
   m_ObjectHideFlags: 1

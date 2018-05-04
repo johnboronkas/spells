@@ -12,7 +12,7 @@ public class PlayerMoverController : MoverController
 
     public override void HandleMovement(Mover mover)
     {
-        float speed = mover.CurrentSpeed * Time.deltaTime;
+        float speed = mover.Speed * Time.deltaTime;
         float horizonal = Input.GetAxis(InputManager.Horizontal);
         float vertical = Input.GetAxis(InputManager.Vertical);
 

@@ -18,6 +18,17 @@ public class Health : MonoBehaviour
         }
     }
 
+    public void AdjustMaxHealth(int amount)
+    {
+        MaxHealth = MaxHealth + amount;
+        CurrentHealth = Math.Min(CurrentHealth, MaxHealth);
+        if (CurrentHealth <= 0)
+        {
+            DestroyAllDependents();
+            Respawner.Kill(gameObject);
+        }
+    }
+
     private void DestroyAllDependents()
     {
         if (DependentGameObjects != null)

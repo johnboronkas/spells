@@ -4,7 +4,7 @@ public class UnitHealthUI : MonoBehaviour
 {
     public UnitHealthUIController UnitHealthUIController;
 
-    public float FloatHeight; // 0.2f
+    public float FloatHeight;
     public Transform HealthBarBackground;
     public Transform HealthBarForeground;
 

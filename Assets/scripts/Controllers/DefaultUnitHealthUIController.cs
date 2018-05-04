@@ -11,9 +11,7 @@ public class DefaultUnitHealthUIController : UnitHealthUIController
 
     public override void UpdateUnitHealthUI(UnitHealthUI unitHealthUI)
     {
-        Debug.Log(Health.CurrentHealth);
-
-        unitHealthUI.HealthBarBackground.localScale = new Vector3(Health.MaxHealth / 2, unitHealthUI.HealthBarBackground.localScale.y, unitHealthUI.HealthBarBackground.localScale.z);
-        unitHealthUI.HealthBarForeground.localScale = new Vector3(Health.CurrentHealth / 2, unitHealthUI.HealthBarForeground.localScale.y, unitHealthUI.HealthBarForeground.localScale.z);
+        unitHealthUI.HealthBarBackground.localScale = new Vector3(Health.MaxHealth, unitHealthUI.HealthBarBackground.localScale.y, unitHealthUI.HealthBarBackground.localScale.z);
+        unitHealthUI.HealthBarForeground.localScale = new Vector3(Health.CurrentHealth, unitHealthUI.HealthBarForeground.localScale.y, unitHealthUI.HealthBarForeground.localScale.z);
     }
 }

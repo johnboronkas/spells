@@ -85,14 +85,17 @@
     <Compile Include="Assets\scripts\Behaviours\AbilityUser.cs" />
     <Compile Include="Assets\scripts\Behaviours\ControllerDefinitions\AbilityUserController.cs" />
     <Compile Include="Assets\scripts\Behaviours\ControllerDefinitions\MoverController.cs" />
+    <Compile Include="Assets\scripts\Behaviours\ControllerDefinitions\UnitEnergyUIController.cs" />
     <Compile Include="Assets\scripts\Behaviours\ControllerDefinitions\UnitHealthUIController.cs" />
     <Compile Include="Assets\scripts\Behaviours\ControllerDefinitions\UnitNameUIController.cs" />
     <Compile Include="Assets\scripts\Behaviours\Health.cs" />
     <Compile Include="Assets\scripts\Behaviours\Mover.cs" />
+    <Compile Include="Assets\scripts\Behaviours\UnitEnergyUI.cs" />
     <Compile Include="Assets\scripts\Behaviours\UnitHealthUI.cs" />
     <Compile Include="Assets\scripts\Behaviours\UnitNameUI.cs" />
     <Compile Include="Assets\scripts\Controllers\AIAbilityUserController.cs" />
     <Compile Include="Assets\scripts\Controllers\AIMoverController.cs" />
+    <Compile Include="Assets\scripts\Controllers\DefaultUnitEnergyUIController.cs" />
     <Compile Include="Assets\scripts\Controllers\DefaultUnitHealthUIController.cs" />
     <Compile Include="Assets\scripts\Controllers\DefaultUnitNameUIController.cs" />
     <Compile Include="Assets\scripts\Controllers\PlayerAbilityUserController.cs" />

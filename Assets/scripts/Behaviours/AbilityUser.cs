@@ -8,8 +8,7 @@ public class AbilityUser : MonoBehaviour
 
     public int MaxEnergy;
     public int CurrentEnergy;
-    public int MaxRechargeRatePerSec;
-    public int CurrentRechargeRatePerSec;
+    public int RechargeRatePerSec;
 
     private void Start()
     {
@@ -21,7 +20,7 @@ public class AbilityUser : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1.0f);
-            AdjustEnergy(CurrentRechargeRatePerSec);
+            AdjustEnergy(RechargeRatePerSec);
         }
     }
 
