@@ -4,7 +4,7 @@ public class UnitEnergyUI : MonoBehaviour
 {
     public UnitEnergyUIController UnitEnergyUIController;
 
-    public float FloatHeight;
+    public float FloatHeight = 0.35f;
     public Transform EnergyBarBackground;
     public Transform EnergyBarForeground;
 

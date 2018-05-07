@@ -8,7 +8,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## TODO (priority order)
 
-- Make spreadsheet for ability/stat tuning (settings in the prefabs, in case they are ever reset/lost)
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal

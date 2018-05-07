@@ -6,9 +6,9 @@ public class AbilityUser : MonoBehaviour
 {
     public AbilityUserController AbilityUserController;
 
-    public int MaxEnergy;
-    public int CurrentEnergy;
-    public int RechargeRatePerSec;
+    public int MaxEnergy = 50;
+    public int CurrentEnergy = 25;
+    public int RechargeRatePerSec = 4;
 
     private void Start()
     {

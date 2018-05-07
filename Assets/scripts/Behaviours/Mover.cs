@@ -4,7 +4,7 @@ public class Mover : MonoBehaviour
 {
     public MoverController MoverController;
 
-    public int Speed;
+    public int Speed = 2000;
 
     private void FixedUpdate()
     {

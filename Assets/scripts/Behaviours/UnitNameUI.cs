@@ -4,8 +4,8 @@ public class UnitNameUI : MonoBehaviour
 {
     public UnitNameUIController UnitNameUIController;
     
-    public string UnitName;
-    public float FloatHeight;
+    public string UnitName = "Default";
+    public float FloatHeight = 0.5f;
 
     private Transform parent;
 

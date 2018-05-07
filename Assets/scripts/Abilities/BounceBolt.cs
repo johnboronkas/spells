@@ -3,12 +3,12 @@
 [RequireComponent(typeof(Rigidbody2D))]
 public class BounceBolt : Ability
 {
-    public float SpellSpeed;
-    public int MaxBounces;
-    public int Damage;
-    public float ProjectileSpawnDistance;
-    public int EnergyCost;
-    public float ActivationsPerSecond;
+    public float SpellSpeed = 8.0f;
+    public int MaxBounces = 2;
+    public int Damage = 5;
+    public float ProjectileSpawnDistance = 0.25f;
+    public int EnergyCost = 4;
+    public float ActivationsPerSecond = 0.25f;
 
     private Rigidbody2D Rigidbody2D;
     private int CurrentBounces;

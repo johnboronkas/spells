@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int MaxHealth;
-    public int CurrentHealth;
+    public int MaxHealth = 30;
+    public int CurrentHealth = 20;
     public Respawner Respawner;
     public GameObject[] DependentGameObjects;
 
