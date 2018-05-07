@@ -8,9 +8,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## TODO (priority order)
 
-- Ability Rate of Fire
-  - Bounce bolt should be about 0.25 / sec
-  - No max rate of fire
 - Camera Movement / Larger maps (keep camera centered)
 - Camera Zoom controls
 - Blocking/reflecting spell
@@ -83,7 +80,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ### Class Upgrades
 
-- health
+- health (max health only, not current health)
 - energy (both max energy and regen rate)
 - speed (and regen %s from forts / sources of regen)
 

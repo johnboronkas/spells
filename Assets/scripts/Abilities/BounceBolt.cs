@@ -8,6 +8,7 @@ public class BounceBolt : Ability
     public int Damage;
     public float ProjectileSpawnDistance;
     public int EnergyCost;
+    public float ActivationsPerSecond;
 
     private Rigidbody2D Rigidbody2D;
     private int CurrentBounces;
@@ -45,15 +46,19 @@ public class BounceBolt : Ability
         }
     }
 
-    public override void Activate(Transform transform, AbilityUser abilityUser)
+    public override float Activate(Transform transform, AbilityUser abilityUser, float lastActivationTime)
     {
-        if (abilityUser.CanAffordAbility(EnergyCost))
+        if (abilityUser.CanAffordAbility(EnergyCost) && ((Time.time - lastActivationTime) >= ActivationsPerSecond))
         {
             abilityUser.AdjustEnergy(-EnergyCost);
 
-            var position = transform.position + (ProjectileSpawnDistance * transform.up);
-            var rotation = transform.rotation;
+            Vector3 position = transform.position + (ProjectileSpawnDistance * transform.up);
+            Quaternion rotation = transform.rotation;
             Instantiate(this, position, rotation);
+
+            return Time.time;
         }
+
+        return lastActivationTime;
     }
 }

@@ -4,9 +4,12 @@ public class PlayerAbilityUserController : AbilityUserController
 {
     public Ability[] Abilities;
     public Texture2D CursorTexture;
-    
+
+    private float[] LastAbilityActivationTimes;
+
     private void Start()
     {
+        LastAbilityActivationTimes = new float[Abilities.Length];
         SetCursor(CursorTexture);
     }
 
@@ -29,9 +32,9 @@ public class PlayerAbilityUserController : AbilityUserController
 
     public override void HandleAbilities(AbilityUser abilityUser)
     {
-        if (Input.GetButtonDown(InputManager.Ability1))
+        if (Input.GetButton(InputManager.Ability1))
         {
-            Abilities[0].Activate(gameObject.transform, abilityUser);
+            LastAbilityActivationTimes[0] = Abilities[0].Activate(gameObject.transform, abilityUser, LastAbilityActivationTimes[0]);
         }
     }
 }

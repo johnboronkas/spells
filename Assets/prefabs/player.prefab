@@ -374,8 +374,7 @@ MonoBehaviour:
   AbilityUserController: {fileID: 114137482189839752}
   MaxEnergy: 50
   CurrentEnergy: 25
-  MaxRechargeRatePerSec: 4
-  CurrentRechargeRatePerSec: 4
+  RechargeRatePerSec: 4
 --- !u!114 &114137482189839752
 MonoBehaviour:
   m_ObjectHideFlags: 1
