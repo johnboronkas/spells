@@ -20,4 +20,12 @@ public static class Utils
     {
         transform.position = unit.position + (Vector3.up * floatHeight);
     }
+
+    public static float Bound(this float num, float min, float max)
+    {
+        float boundedNum = Mathf.Max(num, min);
+        boundedNum = Mathf.Min(boundedNum, max);
+
+        return boundedNum;
+    }
 }

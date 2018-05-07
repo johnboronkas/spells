@@ -41,4 +41,10 @@
         get { return "Cancel"; }
         private set { }
     }
+
+    public static string Camera_Zoom
+    {
+        get { return "Camera Zoom"; }
+        private set { }
+    }
 }

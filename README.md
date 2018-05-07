@@ -8,8 +8,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## TODO (priority order)
 
-- Camera Movement / Larger maps (keep camera centered)
-- Camera Zoom controls
+- Make spreadsheet for ability/stat tuning (settings in the prefabs, in case they are ever reset/lost)
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal
@@ -31,8 +30,8 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Multiplayer
 - Show unit count for each side and number of officers, lieutenants, and generals (per side)
 - moral bar (summary/normalized number of total exp, num of units, and number of capture points)
-- Kills of Officers, Lieutenants, and Generals are announced globaly (both the killer and the killed)
-- AI (each side should have a varity of differently skilled AI)
+- Kills of Officers, Lieutenants, and Generals are announced globally (both the killer and the killed)
+- AI (each side should have a variety of differently skilled AI)
 
 ### TODO Later
 
