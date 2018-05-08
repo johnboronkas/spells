@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4688194320848732}
   - component: {fileID: 212499557022910898}
   - component: {fileID: 50571916837995612}
-  - component: {fileID: 114016781270357246}
   - component: {fileID: 61011086048801190}
+  - component: {fileID: 114276594658999984}
   m_Layer: 9
   m_Name: bounce-bolt
   m_TagString: spell
@@ -88,7 +88,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &114016781270357246
+--- !u!114 &114276594658999984
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1047329257328172}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6be90574e9dc11a4089e9f1566c13a93, type: 3}
+  m_Script: {fileID: 11500000, guid: 5217af52b74dff54b899943a8813c175, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   SpellSpeed: 8
@@ -104,7 +104,7 @@ MonoBehaviour:
   Damage: 5
   ProjectileSpawnDistance: 0.25
   EnergyCost: 4
-  ActivationsPerSecond: 0.25
+  ShotCooldownSec: 0.25
 --- !u!212 &212499557022910898
 SpriteRenderer:
   m_ObjectHideFlags: 1

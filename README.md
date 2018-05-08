@@ -11,10 +11,11 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal
-- Refactor bouncebolt to be like reflect (make manager that spawns fire-and-forgets)
+- Scale up the health bars a bit
 - basic respawn point (just 1 respawn location, no selection)
-- kill counter
+- kill counter (show kill count below unit, public info)
 - Levels / Experience (per damage done, extra exp for a kill, divide bonus by number of people in capture zone)
+  - No UI for levels, done via titles/ranks in below story (only a UI for the exp)
 - display exp bar (public info - yellow)
 - Player level ups (start with 2 skill points, gain 2 skill points per rank up)
   - Ranks are Peon (2), Captain (4), Officer (6), Lieutenant (8), General (10)
@@ -22,16 +23,17 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
   - Ranks are shown as as a pre-fix to player's nickname (Peons shown with no name, Captains shown as just Captain, all others shown as Officer SomeName)
 - Unit name colors (peon blank, captain white/black, officer yellow, lieutenant orange, general red)
 - Players should have **stars** around their titles/names (ai does not)
+  - No stars show if peon
 - Ability to buy upgrades/abilities via skill points (ui overlay)
   - As described in section below
 - Pits (shoot over, but can't walk over)
 - Shields (move over, but can't shoot over)
 - Capture point and regen health, regen mana, better exp gain, more ai troops, respawn points (associated to nearby capture point)
-- Multiplayer
 - Show unit count for each side and number of officers, lieutenants, and generals (per side)
 - moral bar (summary/normalized number of total exp, num of units, and number of capture points)
 - Kills of Officers, Lieutenants, and Generals are announced globally (both the killer and the killed)
 - AI (each side should have a variety of differently skilled AI)
+- Multiplayer
 
 ### TODO Later
 
