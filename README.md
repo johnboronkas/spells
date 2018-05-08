@@ -4,13 +4,15 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## Bugs
 
-- None known
+- Bounce bolt can be spam clicked to get around rate of fire
+  - Switch bounce bolt to use time of last shot instead of coroutine (can spam mouse to shoot faster than rate of fire)
 
 ## TODO (priority order)
 
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal
+- Switch bounce bolt to use time of last shot instead of coroutine (can spam mouse to shoot faster than rate of fire)
 - Scale up the health bars a bit
 - basic respawn point (just 1 respawn location, no selection)
 - kill counter (show kill count below unit, public info)
@@ -26,6 +28,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
   - No stars show if peon
 - Ability to buy upgrades/abilities via skill points (ui overlay)
   - As described in section below
+- Ability bar UI that shows ability icon, hotkey, cooldown, if it is active or not (for reflect shield)
 - Pits (shoot over, but can't walk over)
 - Shields (move over, but can't shoot over)
 - Capture point and regen health, regen mana, better exp gain, more ai troops, respawn points (associated to nearby capture point)
@@ -77,7 +80,8 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
   - Backstabs for major damage
   - Poison dart causes tmp health degen and move speed loss
   - Cloak to go invisible for a short amount of time and increase own move speed
-  - Can place caltrops trap that sets target's movement speed to 0 for a short time 
+  - Can place caltrops trap that sets target's movement speed to very low for a short time
+  - Smoke that causes projectiles to drift when they come in contact with it
 
 ### Class Upgrades
 
