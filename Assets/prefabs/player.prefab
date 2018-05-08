@@ -386,8 +386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5dfbe5f159e7686498f004ae62e0ea6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Abilities:
-  - {fileID: 114016781270357246, guid: 3a49868b69f37d34fa790fa397a1dc28, type: 2}
+  AbilityManagers:
+  - {fileID: 114219059449085016, guid: 2f4a174b4d182e84a834dfbfb0135ab9, type: 2}
   CursorTexture: {fileID: 2800000, guid: 34336d923d7b3bd4fa0db0978a83c67f, type: 3}
 --- !u!114 &114145547782103684
 MonoBehaviour:

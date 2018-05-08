@@ -12,9 +12,9 @@
         private set { }
     }
 
-    public static string Ability1
+    public static string Ability0
     {
-        get { return "Ability1"; }
+        get { return "Ability0"; }
         private set { }
     }
 
@@ -45,6 +45,12 @@
     public static string Camera_Zoom
     {
         get { return "Camera Zoom"; }
+        private set { }
+    }
+
+    public static string Ability1
+    {
+        get { return "Ability1"; }
         private set { }
     }
 }

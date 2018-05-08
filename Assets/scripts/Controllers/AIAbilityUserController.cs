@@ -2,7 +2,7 @@
 
 public class AIAbilityUserController : AbilityUserController
 {
-    public Ability[] Abilities;
+    public AbilityManager[] AbilityManagers;
 
     public override void HandleRotation()
     {

@@ -11,6 +11,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 - Blocking/reflecting spell
   - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
   - otherwise reflects like normal
+- Refactor bouncebolt to be like reflect (make manager that spawns fire-and-forgets)
 - basic respawn point (just 1 respawn location, no selection)
 - kill counter
 - Levels / Experience (per damage done, extra exp for a kill, divide bonus by number of people in capture zone)
