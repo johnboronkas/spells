@@ -99,6 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b25f0443420239d45ba104b28e182d69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Distance: 0.25
+  EnergyCostPerTick: 5
+  TickLengthSeconds: 0.25
 --- !u!212 &212437211426811496
 SpriteRenderer:
   m_ObjectHideFlags: 1

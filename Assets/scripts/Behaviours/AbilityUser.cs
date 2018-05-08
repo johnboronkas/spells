@@ -8,7 +8,8 @@ public class AbilityUser : MonoBehaviour
 
     public int MaxEnergy = 50;
     public int CurrentEnergy = 25;
-    public int RechargeRatePerSec = 4;
+    public int RechargeRatePerTick = 1;
+    public float TickLengthSeconds = 0.25f;
 
     private void Start()
     {
@@ -19,8 +20,8 @@ public class AbilityUser : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1.0f);
-            AdjustEnergy(RechargeRatePerSec);
+            yield return new WaitForSeconds(TickLengthSeconds);
+            AdjustEnergy(RechargeRatePerTick);
         }
     }
 

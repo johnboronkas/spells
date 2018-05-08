@@ -7,8 +7,7 @@ public class ReflectManager : AbilityManager
 
     public override void Activate(Transform transform, AbilityUser abilityUser)
     {
-        // TODO Continuous energy drain
-        if (abilityUser.CanAffordAbility(Reflect.EnergyCostPerTick))
+        if (Clone == null && abilityUser.CanAffordAbility(Reflect.EnergyCostPerTick))
         {
             abilityUser.AdjustEnergy(-Reflect.EnergyCostPerTick);
 
@@ -23,6 +22,7 @@ public class ReflectManager : AbilityManager
         if (Clone != null)
         {
             Destroy(Clone.gameObject);
+            Clone = null;
         }
     }
 }

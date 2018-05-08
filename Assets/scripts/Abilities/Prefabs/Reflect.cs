@@ -1,10 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections;
+using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Reflect : MonoBehaviour
 {
     public float Distance = 0.25f;
-    public int EnergyCostPerTick = 3;
+    public int EnergyCostPerTick = 5;
     public float TickLengthSeconds = 0.25f;
     
     public Transform CasterTransform { get; set; }
@@ -17,6 +19,24 @@ public class Reflect : MonoBehaviour
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         ReflectState = ReflectState.Perfect; // TODO time down the reflect states
+
+        StartCoroutine("PayEnergyUpkeep");
+    }
+
+    private IEnumerator PayEnergyUpkeep()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(TickLengthSeconds);
+            if (AbilityUser.CanAffordAbility(EnergyCostPerTick))
+            {
+                AbilityUser.AdjustEnergy(-EnergyCostPerTick);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
     private void LateUpdate()
