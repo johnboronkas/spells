@@ -4,12 +4,10 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## Bugs
 
-- Bounce bolt can be spam clicked to get around rate of fire
-  - Switch bounce bolt to use time of last shot instead of coroutine (can spam mouse to shoot faster than rate of fire)
+- None known
 
 ## TODO (priority order)
 
-- Switch bounce bolt to use time of last shot instead of coroutine (can spam mouse to shoot faster than rate of fire)
 - Scale up the health bars a bit
 - basic respawn point (just 1 respawn location, no selection)
 - kill counter (show kill count below unit, public info)

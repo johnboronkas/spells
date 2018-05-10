@@ -7,33 +7,32 @@ public class BounceBoltManager : AbilityManager
 
     private Transform Transform;
     private AbilityUser AbilityUser;
+    private float NextShotTime;
+    private bool IsShooting;
 
     public override void Activate(Transform transform, AbilityUser abilityUser)
     {
         Transform = transform;
         AbilityUser = abilityUser;
 
-        StartCoroutine("RapidFire");
+        IsShooting = true;
     }
 
-    private IEnumerator RapidFire()
+    private void Update()
     {
-        while (true)
+        if (IsShooting && NextShotTime <= Time.time && AbilityUser.CanAffordAbility(BounceBolt.EnergyCost))
         {
-            if (AbilityUser.CanAffordAbility(BounceBolt.EnergyCost))
-            {
-                AbilityUser.AdjustEnergy(-BounceBolt.EnergyCost);
+            AbilityUser.AdjustEnergy(-BounceBolt.EnergyCost);
 
-                Vector3 position = Transform.position + (BounceBolt.ProjectileSpawnDistance * Transform.up);
-                Instantiate(BounceBolt, position, Transform.rotation);
-            }
+            Vector3 position = Transform.position + (BounceBolt.ProjectileSpawnDistance * Transform.up);
+            Instantiate(BounceBolt, position, Transform.rotation);
 
-            yield return new WaitForSeconds(BounceBolt.ShotCooldownSec);
+            NextShotTime = Time.time + BounceBolt.ShotCooldownSec;
         }
     }
 
     public override void Deactivate(Transform transform, AbilityUser abilityUser)
     {
-        StopCoroutine("RapidFire");
+        IsShooting = false;
     }
 }
