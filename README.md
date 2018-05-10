@@ -9,9 +9,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## TODO (priority order)
 
-- Blocking/reflecting spell
-  - reflects 180 degrees if blocked in the first 0.1 ish seconds with a 1.5x speed increase (shield is red)
-  - otherwise reflects like normal
 - Switch bounce bolt to use time of last shot instead of coroutine (can spam mouse to shoot faster than rate of fire)
 - Scale up the health bars a bit
 - basic respawn point (just 1 respawn location, no selection)
@@ -24,7 +21,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
   - XP is expoitital both up and down the rank chart (ie, an Officer would need to damage like 12 captains to level up, but only 3 lieutenants)
   - Ranks are shown as as a pre-fix to player's nickname (Peons shown with no name, Captains shown as just Captain, all others shown as Officer SomeName)
 - Unit name colors (peon blank, captain white/black, officer yellow, lieutenant orange, general red)
-- Players should have **stars** around their titles/names (ai does not)
+- Players should have \*\*stars\*\* around their titles/names (ai does not)
   - No stars show if peon
 - Ability to buy upgrades/abilities via skill points (ui overlay)
   - As described in section below
@@ -52,6 +49,7 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 - Mage
   - Bounce Bolt (speed also increases projectile speed, health increases # of bounces, energy increases damage)
+  - Reflect projectile shield
   - Short range Teleport
   - Fireball (fire once normally as a small projectile, explode on impact or on second button press)
 - Archer arrows pierce 'x' walls and units and do a lot of damage, but are inaccurate over long range

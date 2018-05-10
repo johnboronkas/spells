@@ -12,12 +12,10 @@ public class Reflect : MonoBehaviour
     public AbilityUser AbilityUser { get; set; }
 
     private Rigidbody2D Rigidbody2D;
-    private ReflectState ReflectState;
 
     private void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        ReflectState = ReflectState.Perfect; // TODO time down the reflect states
 
         StartCoroutine("PayEnergyUpkeep");
     }
@@ -40,11 +38,12 @@ public class Reflect : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.SetPositionAndRotation(CasterTransform.position + (Distance * CasterTransform.up), CasterTransform.rotation);
-    }
+        if (CasterTransform == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        // TODO based on reflect state (bounce bolt should not need to know about reflects and vice versa)
+        transform.SetPositionAndRotation(CasterTransform.position + (Distance * CasterTransform.up), CasterTransform.rotation);
     }
 }
