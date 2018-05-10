@@ -8,7 +8,6 @@ Unity game built with Unity version 5.6.3p1 Personal (64 bit)
 
 ## TODO (priority order)
 
-- Scale up the health bars a bit
 - basic respawn point (just 1 respawn location, no selection)
 - kill counter (show kill count below unit, public info)
 - Levels / Experience (per damage done, extra exp for a kill, divide bonus by number of people in capture zone)

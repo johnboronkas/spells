@@ -236,7 +236,7 @@ Transform:
   m_GameObject: {fileID: 1668185080822536}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_LocalScale: {x: 50, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4512816080204946}
   m_RootOrder: 1
@@ -305,7 +305,7 @@ Transform:
   m_GameObject: {fileID: 1777804569410170}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_LocalScale: {x: 50, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4512816080204946}
   m_RootOrder: 0
@@ -318,7 +318,7 @@ Transform:
   m_GameObject: {fileID: 1104121746851844}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_LocalScale: {x: 50, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4463418902414496}
   m_RootOrder: 0
@@ -346,7 +346,7 @@ Transform:
   m_GameObject: {fileID: 1649806769181846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 3, z: 1}
+  m_LocalScale: {x: 50, y: 6, z: 1}
   m_Children: []
   m_Father: {fileID: 4463418902414496}
   m_RootOrder: 1
@@ -442,8 +442,8 @@ TextMesh:
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 20
-  m_FontStyle: 0
+  m_FontSize: 22
+  m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitEnergyUIController: {fileID: 114145547782103684}
-  FloatHeight: 0.35
+  FloatHeight: 0.375
   EnergyBarBackground: {fileID: 4615034396137938}
   EnergyBarForeground: {fileID: 4247453319302540}
 --- !u!114 &114654760273957370
@@ -575,7 +575,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UnitNameUIController: {fileID: 114533592730599376}
   UnitName: Default
-  FloatHeight: 0.5
+  FloatHeight: 0.6
 --- !u!114 &114665812230401456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -622,7 +622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitHealthUIController: {fileID: 114756272235721194}
-  FloatHeight: 0.4
+  FloatHeight: 0.45
   HealthBarBackground: {fileID: 4722378540506032}
   HealthBarForeground: {fileID: 4862445592559244}
 --- !u!212 &212084462748068706
