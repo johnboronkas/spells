@@ -2,6 +2,8 @@
 
 public static class Utils
 {
+    private static System.Random Rand = new System.Random();
+
     public static void Reflect(Rigidbody2D rigidbody2D, Transform transform, Vector3 oldVelocity, Collision2D other)
     {
         ContactPoint2D contact = other.contacts[0];
@@ -16,9 +18,9 @@ public static class Utils
         transform.rotation = rotation * transform.rotation;
     }
 
-    public static void CenterAboveUnit(Transform transform, Transform unit, float floatHeight)
+    public static void CenterOnUnit(Transform transform, Transform unit, float floatHeight)
     {
-        transform.position = unit.position + (Vector3.up * floatHeight);
+        transform.SetPositionAndRotation(unit.position + (Vector3.up * floatHeight), Quaternion.identity);
     }
 
     public static float Bound(this float num, float min, float max)
@@ -27,5 +29,10 @@ public static class Utils
         boundedNum = Mathf.Min(boundedNum, max);
 
         return boundedNum;
+    }
+
+    public static float GetRandomPos(float axisPos, int minAdjustInclusive, int maxAdjustInclusive)
+    {
+        return axisPos + Rand.Next(minAdjustInclusive, maxAdjustInclusive + 1);
     }
 }

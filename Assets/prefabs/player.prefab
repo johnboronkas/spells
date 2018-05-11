@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 114665812230401456}
   m_Layer: 9
   m_Name: player
-  m_TagString: friendly
+  m_TagString: player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -530,8 +530,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 30
   CurrentHealth: 20
-  Respawner: {fileID: 114813800290025380, guid: e21eddf73fcde0a4fab01cd88bb8db2f,
-    type: 2}
+  Respawner: {fileID: 0}
   DependentGameObjects:
   - {fileID: 1702046471187372}
   - {fileID: 1261368466657976}

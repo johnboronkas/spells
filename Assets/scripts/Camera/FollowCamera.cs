@@ -6,9 +6,11 @@ public class FollowCamera : MonoBehaviour
     public GameObject FollowTarget;
     public float MinOrthoSize;
     public float MaxOrthoSize;
+    public float FollowTargetSearchInterval = 0.5f;
 
     private Camera Camera;
     private Vector3 Offset;
+    private float NextSearchTime;
 
 	private void Start()
     {
@@ -23,7 +25,11 @@ public class FollowCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (FollowTarget == null) return;
+        if (FollowTarget == null && NextSearchTime <= Time.time)
+        {
+            FollowTarget = GameObject.FindGameObjectWithTag(Tags.Player);
+            NextSearchTime = Time.time + NextSearchTime;
+        }
 
         transform.position = FollowTarget.transform.position + Offset;
 	}

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class UnitEnergyUI : MonoBehaviour
 {
@@ -8,17 +9,9 @@ public class UnitEnergyUI : MonoBehaviour
     public Transform EnergyBarBackground;
     public Transform EnergyBarForeground;
 
-    private Transform parent;
-
-    private void Start()
-    {
-        parent = transform.parent;
-        transform.parent = null;
-    }
-
     private void LateUpdate()
     {
         UnitEnergyUIController.UpdateUnitEnergyUI(this);
-        Utils.CenterAboveUnit(transform, parent, FloatHeight);
+        Utils.CenterOnUnit(transform, transform.parent, FloatHeight);
     }
 }

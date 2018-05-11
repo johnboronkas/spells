@@ -105,8 +105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MaxHealth: 35
   CurrentHealth: 25
-  Respawner: {fileID: 114813800290025380, guid: e21eddf73fcde0a4fab01cd88bb8db2f,
-    type: 2}
+  Respawner: {fileID: 0}
 --- !u!114 &114399008377382964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -129,8 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18a9e6e20072a964593de05ec165b748, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Abilities:
-  - {fileID: 114016781270357246, guid: 3a49868b69f37d34fa790fa397a1dc28, type: 2}
+  AbilityManagers: []
 --- !u!114 &114614855924625378
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -143,10 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoverController: {fileID: 114399008377382964}
-  MaxSpeed: 2000
-  MaxSprintSpeed: 5000
-  CurrentSpeed: 2000
-  CurrentSprintSpeed: 5000
+  Speed: 2000
 --- !u!114 &114821382745384216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -159,6 +154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AbilityUserController: {fileID: 114463528042767186}
+  MaxEnergy: 50
+  CurrentEnergy: 25
+  RechargeRatePerTick: 1
+  TickLengthSeconds: 0.25
 --- !u!212 &212911553527751614
 SpriteRenderer:
   m_ObjectHideFlags: 1

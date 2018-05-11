@@ -9,6 +9,8 @@ TagManager:
   - friendly
   - spell
   - wall
+  - spawn-point
+  - game-logic
   layers:
   - Default
   - TransparentFX

@@ -6,37 +6,33 @@ public class Health : MonoBehaviour
     public int MaxHealth = 30;
     public int CurrentHealth = 20;
     public Respawner Respawner;
-    public GameObject[] DependentGameObjects;
+
+    private void Start()
+    {
+        if (Respawner == null)
+        {
+            Respawner = FindObjectOfType<Respawner>();
+        }
+    }
 
     public void AdjustHealth(int amount)
     {
         CurrentHealth = Math.Min(CurrentHealth + amount, MaxHealth);
-        if (CurrentHealth <= 0)
-        {
-            DestroyAllDependents();
-            Respawner.Kill(gameObject);
-        }
+        CheckForDeath();
     }
 
     public void AdjustMaxHealth(int amount)
     {
         MaxHealth = MaxHealth + amount;
         CurrentHealth = Math.Min(CurrentHealth, MaxHealth);
-        if (CurrentHealth <= 0)
-        {
-            DestroyAllDependents();
-            Respawner.Kill(gameObject);
-        }
+        CheckForDeath();
     }
 
-    private void DestroyAllDependents()
+    private void CheckForDeath()
     {
-        if (DependentGameObjects != null)
+        if (CurrentHealth <= 0)
         {
-            foreach (GameObject g in DependentGameObjects)
-            {
-                Destroy(g);
-            }
+            Respawner.Kill(gameObject);
         }
     }
 }
